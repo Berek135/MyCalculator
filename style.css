@@ -34,7 +34,7 @@ body {
   }
   
   #display {
-      width: 90%;
+      width: 143%;
       font-size: 1.5rem;
       height: 45px;
       border: none;
@@ -42,11 +42,11 @@ body {
       color: rgb(34, 8, 8);
       text-align: right;
       padding-right: 5px;
-      padding-left: 10px;
+      padding-left: 5px;
   }
   
   .operator {
-    background-color: #cee9ea;
+    background-color: #f6fafa;
     position: relative;
   }
   #clear {

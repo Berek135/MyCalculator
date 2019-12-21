@@ -5,43 +5,57 @@
       <link rel="stylesheet" type ="text/css" href ="style.css"></link>
       <script type="text/javascript" src="javas.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.2/math.js"></script>
-
+   
    </head>
    <body>
       <table>
-         <form name="calculator">
+         <form name="calc">
 
             <tr>
-               <td colspan="4">
-                  <input type="text" class="display" id="display" value="0" disabled/>
-               </td>
+               <td colspan="4"><input type="text" class="display" id="display" value='0' disabled></td>
             </tr>
             <tr>
-               <td><input type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
-               <td><input type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
-               <td><input type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
-               <td><input type="button" class="operator" name="plus" value="+" onclick="calculator.display.value += '+'"></td>
+               <td><input type="button" name="btnsin" value="<-" onClick="backspace(this.form)"></td>
+               <td><input type="button" name="btnsqrt" value="%" onClick="calc.display.value +='%'"></td>
+               <td><input type="button" name="btnsin" value="sin" onClick="calc.display.value= Math.sin(calc.display.value)"></td>
+               <td><input type="button" name="btncos" value="cos" onClick="calc.display.value= Math.cos(calc.display.value)"></td>
+               <td><input type="button" name="btntan" value="tan" onClick="calc.display.value= Math.tan(calc.display.value)"></td>
+               <td><input type="button" name="btnsqrt" value="rt" onClick="calc.display.value= Math.sqrt(calc.display.value)"></td>
             </tr>
             <tr>
-               <td><input type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
-               <td><input type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
-               <td><input type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
-               <td><input type="button" class="operator" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
+               <td><input type="button" name="comma" value="," onClick="calc.display.value +=','"></td>
+               <td><input type="button" name="btncos" value="pi" onClick="calc.display.value='3.14159'"></td>   
+               <td><input type="button" name="one" value="1" onClick="calc.display.value += '1'"></td>
+               <td><input type="button" name="two" value="2" onClick="calc.display.value += '2'"></td>
+               <td><input type="button" name="three" value="3" onClick="calc.display.value += '3'"></td>
+               <td><input type="button" class="operator" name="plus" value="+" onClick="calc.display.value += '+'"></td>
             </tr>
             <tr>
-               <td><input type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
-               <td><input type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
-               <td><input type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
-               <td><input type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></td>
+               <td><input type="button" name="obrkt" value="(" onClick="calc.display.value +='('"></td>           
+               <td><input type="button" name="cbrkt" value=")" onClick="calc.display.value +=')'"></td>
+               <td><input type="button" name="four" value="4" onClick="calc.display.value += '4'"></td>
+               <td><input type="button" name="five" value="5" onClick="calc.display.value += '5'"></td>
+               <td><input type="button" name="six" value="6" onClick="calc.display.value += '6'"></td>
+               <td><input type="button" class="operator" name="minus" value="-" onClick="calc.display.value += '-'"></td>
             </tr>
             <tr>
-               <td><input type="button" id="clear" name="clear" value="c" onclick="clean()"></td>
-               <td><input type="button" name="zero" value="0" onclick="calculator.display.value +='0'"></td>
-               <td><input type ="button" id="equals" name="equals" value="=" onclick="calculator.display.value =math.evaluate(calculator.display.value)"></td>
-               <td><input type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
+               <td><input type="button" name="y^n" value="^" onClick="calc.display.value += Math.pow()"></td>
+               <td><input type="button" name="log" value="log" onClick="calc.display.value =Math.log(calc.display.value)"></td>
+               <td><input type="button" name="seven" value="7" onClick="calc.display.value += '7'"></td>
+               <td><input type="button" name="eight" value="8" onClick="calc.display.value += '8'"></td>
+               <td><input type="button" name="nine" value="9" onClick="calc.display.value += '9'"></td>
+               <td><input type="button" class="operator" name="times" value="x" onClick="calc.display.value += '*'"></td>
+            </tr>
+            <tr>
+               <td><input type="button" name="exp" value="exp" onClick="calc.display.value =Math.exp(calc.display.value)"></td>
+               <td><input type="button" name="dot" value="." onClick="calc.display.value +='.'"></td>
+               <td><input type="button" id="clear" name="clear" value="C" onClick="clean('')"></td>
+               <td><input type="button" name="zero" value="0" onClick="calc.display.value +='0'"></td>
+               <td><input type ="button" id="equals" name="equal" value="=" onClick="calc.display.value =math.evaluate(calc.display.value)"></td>
+               <td><input type="button" class="operator" name="div" value="/" onClick="calc.display.value += '/'"></td>
             </tr>     
-         </table>
-      </form>
+         </form>
+      </table>
    </body>
 </html>
-      
+u
